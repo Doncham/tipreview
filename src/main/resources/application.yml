@@ -23,6 +23,7 @@ spring:
 
 
 
+
 #  org.hibernate.type: trace
 
 cloud:
