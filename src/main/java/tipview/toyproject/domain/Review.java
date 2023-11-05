@@ -1,6 +1,7 @@
 package tipview.toyproject.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,11 +14,13 @@ import java.time.LocalDateTime;
 public class Review {
     @Id
     @GeneratedValue
+    @Hidden //Swagger에서 무시
     @Column(name="review_id")
     private Long id;
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
+    @Setter
     private Member member;
 
     @ManyToOne(fetch = FetchType.LAZY)
