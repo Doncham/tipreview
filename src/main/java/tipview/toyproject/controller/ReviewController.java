@@ -1,6 +1,8 @@
 package tipview.toyproject.controller;
 
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,10 +21,13 @@ import java.util.Optional;
 public class ReviewController {
     private final ReviewService reviewService;
     private final S3UploadService s3UploadService;
-
-    @PostMapping("/review/create")
-    public String create(@RequestBody Review review) {
-        reviewService.makeReview(review);
+    @Operation(summary = "리뷰 등록", description ="멤버랑 가게 정보는 입력해줘요 각각 1번과2번 사용 가능(더미 데이터)")
+    @Parameter(name = "member_id", description = "멤버의 주키")
+    @Parameter(name ="store_id", description = "가게의 주키")
+    @PostMapping("/review/create/{member_id}/{store_id}")
+    public String create(@RequestBody Review review, @PathVariable("member_id") Long member_id,
+                         @PathVariable("store_id") Long store_id) {
+        reviewService.makeReview(review,member_id,store_id);
         //리뷰를 만들다가 예외가 생기는 상황은 따로 생각을 해봐야할거같아
         return "success";
     }
