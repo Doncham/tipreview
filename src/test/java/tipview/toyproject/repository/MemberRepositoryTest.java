@@ -11,7 +11,7 @@ import tipview.toyproject.domain.Member;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-@TestPropertySource(properties = "src")
+//@TestPropertySource(properties = "src")
 @Transactional
 @SpringBootTest
 class MemberRepositoryTest {
