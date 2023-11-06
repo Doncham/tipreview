@@ -25,7 +25,7 @@ spring:
 
 
 #  org.hibernate.type: trace
-# 잔디 체크
+# 잔디 체크 #잔디 체크2
 cloud:
   aws:
     s3:
