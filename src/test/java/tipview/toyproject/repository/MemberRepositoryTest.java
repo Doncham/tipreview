@@ -25,5 +25,6 @@ class MemberRepositoryTest {
         List<Member> findMembers = memberRepository.findByNickname("김상원");
 
         Assertions.assertThat(findMembers.get(0).getNickname()).isEqualTo("김상원");
+
     }
 }

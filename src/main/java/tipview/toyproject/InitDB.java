@@ -33,6 +33,7 @@ public class InitDB {
             Member memberA = createMember("userA", "111");
             Member memberB = createMember("Sangwon", "111");
 
+
             Store store1 = createStore("한스델리", "010-8873-2065");
             Store store2 = createStore("우쿠야", "010-8873-1111");
 
