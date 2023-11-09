@@ -25,7 +25,7 @@ spring:
 
 
 #  org.hibernate.type: trace
-# 잔디 체크 #잔디 체크2 #잔디 체크3
+# 잔디 체크 #잔디 체크2 #잔디 체크3 잔디체크4잔디체크5 돈참으로 이름바꿈 6global하게 바 1
 cloud:
   aws:
     s3:
